@@ -11,7 +11,7 @@ services:
     privileged: true
     volumes:
      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-     - ${CONFIG}:/config
+     - ${CONFIG}:/config:rw
      - ${ANSIBLE_HOME}/shared:/shared
      - ${ANSIBLE_HOME}/ubuntu-c/ansible:/home/ansible
      - ${ANSIBLE_HOME}/ubuntu-c/root:/root
@@ -28,7 +28,7 @@ services:
     privileged: true
     volumes:
      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-     - ${CONFIG}:/config
+     - ${CONFIG}:/config:rw
      - ${ANSIBLE_HOME}/shared:/shared
      - ${ANSIBLE_HOME}/ubuntu1/ansible:/home/ansible
      - ${ANSIBLE_HOME}/ubuntu1/root:/root
